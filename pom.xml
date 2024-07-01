@@ -74,14 +74,14 @@
 			<artifactId>opencsv</artifactId>
 			<version>5.9</version>
 		</dependency>
-		
-		
+
+
 		<dependency>
 			<groupId>com.aventstack</groupId>
 			<artifactId>extentreports</artifactId>
 			<version>${extentreports-version}</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>io.qameta.allure</groupId>
 			<artifactId>allure-testng</artifactId>
@@ -121,16 +121,17 @@
 					<forkCount>3</forkCount>
 					<reuseForks>true</reuseForks>
 					<suiteXmlFiles>
-						<suiteXmlFile>src/test/resources/testrunner/test_regression.xml</suiteXmlFile>
+						<suiteXmlFile>
+							src/test/resources/testrunner/test_regression.xml</suiteXmlFile>
 					</suiteXmlFiles>
-					
+
 					<argLine>
 						-javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
 					</argLine>
-					
-					
+
+
 				</configuration>
-				
+
 				<dependencies>
 					<dependency>
 						<groupId>org.aspectj</groupId>
@@ -138,15 +139,12 @@
 						<version>${aspectj.version}</version>
 					</dependency>
 				</dependencies>
-				
-				
+
+
 			</plugin>
 
 
-
 		</plugins>
-
-
 
 
 	</build>
