@@ -12,7 +12,7 @@ public class Login {
 	}
    public void dologinwithwait(){
 System.out.println(i);
+System.out.println(i+ "selenium");
 }
 	
-
 }
