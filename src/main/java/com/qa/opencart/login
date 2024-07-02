@@ -1,0 +1,16 @@
+package com.qa.opencart;
+
+
+
+public class Login {
+	
+	String i = "street";
+	
+	
+	public void dologin() {
+		System.out.println(i);
+	}
+
+	
+
+}
