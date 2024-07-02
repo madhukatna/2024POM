@@ -10,7 +10,9 @@ public class Login {
 	public void dologin() {
 		System.out.println(i);
 	}
-
+   public void dologinwithwait(){
+System.out.println(i);
+}
 	
 
 }
