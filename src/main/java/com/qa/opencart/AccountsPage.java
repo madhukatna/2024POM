@@ -68,7 +68,7 @@ public class AccountsPage {
 			eleUtil.doClick(searchIcon);
 			return new SearchResultsPage(driver);
 		} else {
-			System.out.println("search field is not present on the page");
+			System.out.println("search field is not present on the page--");
 			return null;
 		}
 	}
