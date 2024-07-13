@@ -5,7 +5,7 @@
 	thread-count="2">
 
 
-	<!-- <test name="Google Test _ chrome">
+	 <test name="Google Test _ chrome">
 		<parameter name="browser" value="chrome" />
 		<parameter name="url" value="https://google.com" />
 
@@ -38,8 +38,7 @@
 			<class name="mytests.OrangeHRMTest" />
 		</classes>
 	</test>
- -->
-
+ 
 
 	<test name="Open Cart App Test">
 		<parameter name="browser" value="chrome" />
