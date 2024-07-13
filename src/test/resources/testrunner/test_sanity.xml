@@ -1,54 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="TestNG Regression Suite" verbose="3" parallel="tests"
-	thread-count="2">
+
+<suite name="Opencart App Test Sanity Suite" thread-count="3"
+	parallel="tests" verbose="4">
 
 
-	 <test name="Google Test _ chrome">
+	<listeners>
+		<listener
+			class-name="com.qa.opencart.listeners.ExtentReportListener" />
+		<listener
+			class-name="com.qa.opencart.listeners.TestAllureListener" />
+		<!-- <listener
+			class-name="com.qa.opencart.listeners.AnnotationTransformer" /> -->
+	</listeners>
+
+
+	<test name="Acc Page Test">
 		<parameter name="browser" value="chrome" />
-		<parameter name="url" value="https://google.com" />
-
+		<groups>
+			<run>
+				<include name="sanity" />
+			</run>
+		</groups>
 		<classes>
-			<class name="mytests.GoogleTest" />
-			
+			<class name="com.qa.opencart.tests.AccountsPageTest" />
 		</classes>
 	</test>
 
-
-	<test name="Open Cart Test">
-		<parameter name="browser" value="firefox" />
-		<parameter name="url"
-			value="https://naveenautomationlabs.com/opencart/index.php?route=account/login" />
-
-
+	<test name="Login Page Test">
+		<parameter name="browser" value="chrome" />
+		<groups>
+			<run>
+				<include name="sanity" />
+			</run>
+		</groups>
 		<classes>
-			<class name="mytests.OpenCartLoginTest" />
+			<class name="com.qa.opencart.tests.LoginPageTest" />
 		</classes>
 	</test>
 
-
-	<test name="OrangeHRM Test">
+	<test name="ProductInfo Page Test">
 		<parameter name="browser" value="edge" />
-		<parameter name="url"
-			value="https://www.orangehrm.com/30-day-free-trial/" />
-
-
+		<groups>
+			<run>
+				<include name="sanity" />
+			</run>
+		</groups>
 		<classes>
-			<class name="mytests.OrangeHRMTest" />
+			<class name="com.qa.opencart.tests.ProductInfoPageTest" />
 		</classes>
 	</test>
- 
 
-	<test name="Open Cart App Test">
+
+	<!-- <test name="Reg Page Test">
 		<parameter name="browser" value="chrome" />
-		<!-- <parameter name="url"
-			value="https://naveenautomationlabs.com/opencart/index.php?route=account/register" />
- -->
+		<groups>
+			<run>
+				<include name="sanity" />
+			</run>
+		</groups>
 		<classes>
 			<class name="com.qa.opencart.tests.RegisterPageTest" />
+			<class name="com.qa.opencart.tests.LoginPageTest" />
 		</classes>
-	</test>
+	</test> -->
 
 
-</suite>
+</suite>	
